@@ -31,7 +31,7 @@ async function populate(flightsParsed) {
     // Add the flight to the database
     const flightValues = [
       flight.airline,
-      flight.flightnumber,
+      flight.flightNumber,
       flight.origin,
       flight.destination,
       flight.adultPrice,
