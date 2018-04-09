@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const flights = require('./routes/flights');
 const bookings = require('./routes/bookings');
+const passengers = require('./routes/passengers');
 
 const app = express();
 const { PORT: port = 3000, HOST: host = '127.0.0.1' } = process.env;
@@ -11,11 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 
 function notFoundHandler(req, res, next) {
   // eslint-disable-line
-  res.status(404).json({ error: 'Not found' });
-  next();
+  return res.status(404).json({ error: 'Not found' });
 }
 
-function errorHandler(err, req, res) {
+function errorHandler(err, req, res, next) {
   // eslint-disable-line
   console.error(err);
 
@@ -27,6 +27,7 @@ function errorHandler(err, req, res) {
 
 app.use('/flights', flights);
 app.use('/bookings', bookings);
+app.use('/passengers', passengers);
 app.use(notFoundHandler);
 app.use(errorHandler);
 
