@@ -21,7 +21,7 @@ CREATE TABLE bookings (
   flightId int REFERENCES flights (id),
   numberAdults int NOT NULL,
   numberChildren int NOT NULL,
-  passengers int[] NOT NULL
+  passengers int[] NOT NULL,
   cardHolder character varying(200) NOT NULL,
   cardNumber character varying(19) NOT NULL,
   expirationDate Date NOT NULL,
