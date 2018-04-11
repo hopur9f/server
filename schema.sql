@@ -34,7 +34,7 @@ CREATE TABLE passengers (
   lastName character varying(100) NOT NULL,
   email character varying(100),
   birthDate Date NOT NULL,
-  residency character varying(100) NOT NULL,
+  nationality character varying(100) NOT NULL,
   numberHandLuggage int NOT NULL,
   numberLuggage int NOT NULL,
   seatNumber character varying(3) NOT NULL
