@@ -18,14 +18,14 @@ CREATE TABLE flights (
 
 CREATE TABLE bookings (
   bookingNumber serial PRIMARY KEY,
-  flightId int REFERENCES flights (id),
+  flightNumber character varying(6) NOT NULL,
   numberAdults int NOT NULL,
   numberChildren int NOT NULL,
   passengers int[] NOT NULL,
   cardHolder character varying(200) NOT NULL,
   cardNumber character varying(19) NOT NULL,
   expirationDate Date NOT NULL,
-  csv int[] NOT NULL
+  csv character varying(3) NOT NULL
 );
 
 CREATE TABLE passengers (
