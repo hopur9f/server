@@ -22,13 +22,17 @@ CREATE TABLE bookings (
   numberAdults int NOT NULL,
   numberChildren int NOT NULL,
   passengers int[] NOT NULL
+  cardHolder character varying(200) NOT NULL,
+  cardNumber character varying(19) NOT NULL,
+  expirationDate Date NOT NULL,
+  csv int[] NOT NULL
 );
 
 CREATE TABLE passengers (
   id serial PRIMARY KEY,
   firstName character varying(100) NOT NULL,
   lastName character varying(100) NOT NULL,
-  email character varying(100) NOT NULL,
+  email character varying(100),
   birthDate Date NOT NULL,
   residency character varying(100) NOT NULL,
   numberHandLuggage int NOT NULL,
