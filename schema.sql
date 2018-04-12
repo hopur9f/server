@@ -18,6 +18,7 @@ CREATE TABLE flights (
 
 CREATE TABLE bookings (
   bookingNumber serial PRIMARY KEY,
+  flightId int NOT NULL,
   flightNumber character varying(6) NOT NULL,
   numberAdults int NOT NULL,
   numberChildren int NOT NULL,
