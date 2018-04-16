@@ -9,8 +9,8 @@ CREATE TABLE flights (
   duration int NOT NULL,
   disabilityAccess boolean NOT NULL,
   animalTransfer boolean NOT NULL,
-  departure Date NOT NULL,
-  arrival Date NOT NULL,
+  departure timestamp NOT NULL,
+  arrival timestamp NOT NULL,
   handLuggagePrice int NOT NULL,
   luggagePrice int NOT NULL,
   availableSeatList  text[]
